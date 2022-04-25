@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: donut-queue
+server:
+  servlet:
+    context-path: "/api/"
+donut:
+  max-donuts-per-cart: 50
+  max-donuts-per-order: ${donut.max-donuts-per-cart}
+  premium-customer-id-limit: 1000
+  order-schedule-interval: 300000 # 5 minutes, important for waiting time
+springdoc:
+  swagger-ui:
+    operations-sorter: method
